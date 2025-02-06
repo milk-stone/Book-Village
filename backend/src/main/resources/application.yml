@@ -46,3 +46,4 @@ JWT:
 openai:
   model: ${OPENAI_MODEL}
   secret-key: ${OPENAI_API_KEY}
+  default-prompt: ${DEFAULT_PROMPT}
