@@ -12,9 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @Getter
 @Configuration
 public class GptConfig {
-    @Value("${openai.model}")
-    private String openaiModel;
-
     @Value("${openai.secret-key}")
     private String secretKey;
 
@@ -26,7 +23,7 @@ public class GptConfig {
     @Bean
     public HttpHeaders httpHeadersForGpt(){
         HttpHeaders headers = new HttpHeaders();
-        headers.setBearerAuth("Bearer " + secretKey);
+        headers.setBearerAuth(secretKey);
         headers.setContentType(MediaType.APPLICATION_JSON);
         return headers;
     }
