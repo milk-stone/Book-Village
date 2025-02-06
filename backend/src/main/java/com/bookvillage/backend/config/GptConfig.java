@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Getter
 @Configuration
 public class GptConfig {
-    @Value("${openai.model")
+    @Value("${openai.model}")
     private String openaiModel;
 
     @Value("${openai.secret-key}")
