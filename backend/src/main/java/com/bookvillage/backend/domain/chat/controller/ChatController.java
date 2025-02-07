@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/v1")
+@RequestMapping("/v1/chat")
 public class ChatController {
     private final GptService gptService;
 
-    @GetMapping("/chat")
+    @PostMapping("/input")
     public ResponseEntity<String> chat(@RequestBody UserInput userInput) {
         return gptService.callOpenAI(userInput);
     }
