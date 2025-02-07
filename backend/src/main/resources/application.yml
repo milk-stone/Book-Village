@@ -42,3 +42,8 @@ server:
 #    key-alias: ${HTTPS_KEY_ALIAS}
 JWT:
   SECRET-KEY: ${JWT_KEY}
+
+openai:
+  model: ${OPENAI_MODEL}
+  secret-key: ${OPENAI_API_KEY}
+  default-prompt: ${DEFAULT_PROMPT}
